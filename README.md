@@ -1,1 +1,1 @@
-# toDo_unect
+Este projeto tem únicamente objetivos eduacionais.
