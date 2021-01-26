@@ -24,10 +24,17 @@
           var ipt = document.querySelector('#iptTodo');
           if(ipt.value != ''){
             var todo = document.getElementById('todo');
-            var toDoList = document.createElement("LI");
+            var toDodiv = document.createElement("div");
+            var toDoList = document.createElement("p");
             var t = document.createTextNode(ipt.value);
             toDoList.appendChild(t);
-            todo.appendChild(toDoList);
+            var bttDone = app.bttDone();    
+            var bttRemove = app.bttRemove();         
+            toDodiv.appendChild(toDoList);
+            toDodiv.appendChild(bttDone);
+            toDodiv.appendChild(bttRemove);
+            todo.appendChild(toDodiv);
+            
           }
         })  
         elemento_pai.appendChild(bttInput);
@@ -44,7 +51,32 @@
         elemento_pai.appendChild(todo);
         todo.appendChild(titulo);
 
+      },
+
+      bttDone: function bttDone() {
+        var bttDone = doc.createElement("button");
+        bttDone.setAttribute('id', 'bttDone');
+        bttDone.addEventListener("click", function () {       
+          
+        })
+        return bttDone
+      },
+
+      bttRemove: function bttRone() {
+        var bttRemove = doc.createElement("button");
+        bttRemove.setAttribute('id', 'bttDone');
+        bttRemove.addEventListener("click", function () {
+          var divRemove = document.querySelector();
+          console.log(divRemove);
+            
+          
+        })
+        return bttRemove
       }
+
+
+
+
     };
   })();
   app.init();
