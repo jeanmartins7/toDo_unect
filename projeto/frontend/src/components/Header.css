@@ -1,0 +1,11 @@
+header#main-header .header-content{
+    position: absolute;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    height: 50px;
+    padding:  0 30px;
+    align-items: center;
+    top: 5%;
+    left: 50%;
+}

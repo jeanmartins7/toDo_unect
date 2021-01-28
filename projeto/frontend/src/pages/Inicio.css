@@ -1,0 +1,82 @@
+section#test{
+    position: absolute;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    height: 50px;
+    padding:  0 50px;
+    align-items: center;
+    top: 5%;
+    left: 45%;
+}
+
+section#test article{
+    position: relative;
+    background: #FDFDFD;
+    border: 1px solid #DFDFDF;
+    box-sizing: border-box;
+    border-radius: 6px; 
+    width: 232px;
+    height: 103px;
+    top:100px;
+    margin-top: 100px;
+}
+
+section#test .box1{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+section#test .box2{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+
+section#test #textoguardasol{
+    position: relative;
+    margin-left: 10px;
+} 
+
+section#test .retangulo{
+    position: absolute;
+    margin-top: 80px;
+    left: 0px;
+}
+
+section#test #plus{
+    position: relative;
+    margin-left: -50px;
+    top: -10px;
+}
+
+ section#test .todo{
+    position: absolute;
+    width: 58px;
+    height: 26px;
+    left: 90px;
+    top:-30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+
+ }
+
+ section#test article .done{
+
+    position: absolute;
+    width: 58px;
+    height: 26px;
+    left: 90px;
+    top: -30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px; }
+
