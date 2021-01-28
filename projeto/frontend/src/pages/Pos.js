@@ -1,13 +1,12 @@
 import React , { Component } from 'react';
 import './Pos.css';
-import guardasol from '../img/fxemoji_beachumbrella.png';
 import retangulo from '../img/Rectangle.png';
 import plus from '../img/plus.png';
 
 class Pos extends Component{
   render() {
     return( 
-      <section id="test">
+      <section id="test2">
         <div className="retangulo">
           <img src={retangulo}/>
           <img id="plus" src={plus}/>
