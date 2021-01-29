@@ -4,10 +4,20 @@ import retangulo from '../img/Rectangle.png';
 import plus from '../img/plus.png';
 
 class Pos extends Component{
+  state ={
+    inicio:[],
+  };
+  async componentDidMount(){
+    const response = await api.get('envio');
+    this.setState({ inicio: response.data});
+    
+  }
   render() {
     return( 
+      <Component>
       <section id="test2">
-        <div className="retangulo">
+        {this.state.feed.map(inicio =>(
+         <div className="retangulo">
           <img src={retangulo}/>
           <img id="plus" src={plus}/>
         </div>
@@ -16,6 +26,12 @@ class Pos extends Component{
         </div>
         <div >
           <span className="todo">TODO</span>
+          <span>{Schema.id}</span>
+          <input
+            type="id"
+            text="todo" 
+          />
+
         </div>
         </article>
 
@@ -25,9 +41,16 @@ class Pos extends Component{
         </div>
         <div>
           <span className="done">DONE</span>
+          <input
+            type="id"
+            texto="aftertodo"
+          />
         </div>
         </article>
-      </section>
+          ))}
+      </section>    
+    </Component> 
+
     );
   }
 }

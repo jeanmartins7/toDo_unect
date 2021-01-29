@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
  
 app.get('/', function (req, res) {
-  res.send('Hello World');
+  res.send('Hello ${re.query.name}');
 });
  
 app.listen(3333)  
