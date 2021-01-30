@@ -1,5 +1,5 @@
 import React , { Component } from 'react';
-import './Pos.css';
+
 import guardasol from '../img/fxemoji_beachumbrella.png';
 import retangulo from '../img/Rectangle.png';
 import plus from '../img/plus.png';
