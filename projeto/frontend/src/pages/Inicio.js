@@ -1,10 +1,21 @@
 import React , { Component } from 'react';
+import api from '../services/api';
+import {Link} from 'react-router-dom';
 import './Inicio.css';
 import guardasol from '../img/fxemoji_beachumbrella.png';
 import retangulo from '../img/Rectangle.png';
 import plus from '../img/plus.png';
 
 class Inicio extends Component{
+  state ={
+    inicio:[],
+  };
+
+  async componentDidMount(){
+    const response = await api.get('envio');
+    this.setState({ inicio: response.data});
+    
+  }
   render() {
     return( 
       <section id="test">
@@ -30,7 +41,7 @@ class Inicio extends Component{
         <div>
           <span className="done">DONE</span>
         </div>
-        </article>
+        </article>  
       </section>
     );
   }
