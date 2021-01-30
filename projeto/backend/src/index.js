@@ -1,20 +1,15 @@
-const express = require('express');
-const mongoose = require('mongoose');
+const express = require("express");
+const bodyParser = require("body-parser");
+
 const app = express();
-var cors = require("cors");
-var bodyParser = require("body-parser");
 
-mongoose.connect('mongodb+srv://masahiro:unect@cluster0.uausv.mongodb.net/<dbname>?retryWrites=true&w=majority', {
-    useNewUrlParser: true, useUnifiedTopology: true,
-});
+app.use("/alltodo", express.static("public"));
 
-app.use(require('./routes'));
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
- 
-app.get('/', function (req, res) {
-  res.send('Hello ${re.query.name}');
-});
- 
-app.listen(3333)  
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extends: false }));
+
+require("./controller/authController")(app);
+
+app.listen(3333);
